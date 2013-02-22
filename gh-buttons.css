@@ -289,6 +289,38 @@
     background-image: linear-gradient(#b33630, #dc5f59);
 }
 
+/* Positive button
+   ========================================================================== */
+
+.button.positive {
+    color: #080;
+}
+
+.button.positive:hover,
+.button.positive:focus,
+.button.positive:active,
+.button.positive.active {
+    border-color: #3c9300;
+    border-bottom-color: #308100;
+    color: #fff;
+    background-color: #63b033;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#63b033), to(#398a00));
+    background-image: -moz-linear-gradient(#63b033, #398a00);
+    background-image: -o-linear-gradient(#63b033, #398a00);
+    background-image: linear-gradient(#63b033, #398a00);
+}
+
+.button.positive:active,
+.button.positive.active {
+    border-color: #308100;
+    border-bottom-color: #459c12;
+    background-color: #398a00;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#398a00), to(#63b033));
+    background-image: -moz-linear-gradient(#398a00, #63b033);
+    background-image: -o-linear-gradient(#398a00, #63b033);
+    background-image: linear-gradient(#398a00, #63b033);
+}
+
 /* Pill button
    ========================================================================== */
 
