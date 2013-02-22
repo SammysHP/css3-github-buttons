@@ -345,7 +345,7 @@
 /* Disabled button
    ========================================================================== */
 
-.button.disable {
+.button.disabled {
     opacity: 0.5;
 }
 
