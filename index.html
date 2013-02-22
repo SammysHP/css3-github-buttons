@@ -3,7 +3,7 @@
 <head> 
     <meta charset="utf-8"> 
     <title>CSS3 GitHub Buttons</title> 
-    <meta name="description" content="Using CSS3 to create GitHub-style buttons from links, buttons, and inputs"> 
+    <meta name="description" content="github-like buttons with CSS."> 
     <style>
         /* ------------------------------------------------------------------------------------------------------------- RESET */
 
@@ -17,7 +17,7 @@
         a { color: #980905; }
         a:hover, a:focus, a:active { text-decoration: none; }
 
-        h1 { margin: 0 0 0.5em; font-size: 36px; }
+        h1 { margin: 0; font-size: 36px; text-align: center; }
         h2 { margin: 0 0 0.75em; font-size: 21px; }
         h3 { margin: 0 0 0.333em; font-size: 16px; font-weight: normal; }
         p { margin: 0 0 1.333em; }
@@ -34,18 +34,14 @@
         .container pre,
         .container .prettyprint { padding: 0; border: 0; margin: 0 0 20px; font-size: 13px; background: #fff; }
 
-        .ribbon { position: absolute; top: -1px; right: -1px; opacity: 0.9; }
-        .ribbon:hover, .ribbon:focus, .ribbon:active { opacity: 1; }
-        .ribbon img { display: block; border: 0; }
-
-        .header { padding-right:80px; }
-
         .section { margin: 40px 0 20px; }
 
         .example { padding: 20px; border: 1px solid #ccc; margin: 10px -20px 20px; }
 
         .footer { margin: 20px 0 50px; font-size: 11px; color: #666; text-align: center; }
         .footer a { color: #666; }
+        
+        .button.favorite.icon:before { background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAMCAYAAAB4MH11AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAONJREFUeNqUUcENwyAMRFWkPOkGdAOyAd2AbkI3YJSMUHWCjJBR0mekPqhPAslpHUqQTont4+7iKCWcru89oBpPSskDotbOnVt+Phs9jvEp/QIc+IIFaBXHelKGb1xPOT/8jkQCPc+sd2Xvd5oPrH6911XV+GSy4SOxJcws9R7AsSQAzOn/AceWtWjCWBHHTLO1aMJYEcdMS/uXTB6V/UsmG/7p684g6Fwq/7idT0kNSz0hOauNkN6w1BOSs9pIBiGLRdaLuRcEg5DFIuvF3AuSAVI7oe8wEwyQ2gl9h1mpPwIMADiqAHWIw+aaAAAAAElFTkSuQmCC"); }
     </style>
     
     <link rel="stylesheet" href="gh-buttons.css">
@@ -56,12 +52,10 @@
 </head> 
 <body onload="prettyPrint()">
 
-<div class="container">
-    <a class="ribbon" href="http://github.com/necolas/css3-github-buttons" target="_blank"><img src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-    
+<div class="container">    
     <div class="header">
         <h1>CSS3 GitHub Buttons</h1>
-        <p><b><a href="http://github.com/necolas/css3-github-buttons" title="GitHub repository">CSS3 GitHub Buttons</a> helps you easily create GitHub-style buttons from links, buttons, and inputs.</b></p>
+        <p style="margin: 0; text-align: center;"><b>github-like buttons with CSS.</b></p>
     </div>
     
     <div class="section">
@@ -116,6 +110,16 @@
             <a href="#button" class="button big">Create Project</a>
         </div>
     </div>
+    
+    <div class="section">
+        <h2>Disabled buttons</h2>
+        <p>If you wish to show a button as disabled you can add the class <code>disabled</code>. Keep in mind that this will not disable the link/button/input.</p>
+        
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="button disabled">Create Project&lt;/a></code></pre>
+            <a href="#button" class="button disabled">Create Project</a>
+        </div>
+    </div>
 
     <div class="section">
         <h2>Grouped buttons</h2>
@@ -161,13 +165,33 @@
             </div>
         </div>
     </div>
+    
+    <div class="section">
+        <h2>Active buttons</h2>
+        <p>You can add the class <code>active</code> to highlight a button.</p>
+        
+        <div class="example">
+<pre class="prettyprint"><code>&lt;div class="button-group">
+    &lt;a href="#" class="button primary">Dashboard&lt;/a>
+    &lt;a href="#" class="button">Inbox&lt;/a>
+    &lt;a href="#" class="button <b>active</b>">Account&lt;/a>
+    &lt;a href="#" class="button">Logout&lt;/a>
+&lt;/div></code></pre>
+            <div class="button-group">
+                <a href="#button" class="button primary">Dashboard</a>
+                <a href="#button" class="button">Inbox</a>
+                <a href="#button" class="button active">Account</a>
+                <a href="#button" class="button">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <div class="section">
         <h2>Mixed groups</h2>
         <p>Displaying a mixture of grouped and standalone buttons, as might be seen in a toolbar, can be done by adding another wrapping element with the class <code>button-container</code>.</p>
         
         <div class="example">
-<pre class="prettyprint"><code>&lt;div class="actions <b>button-container</b>">
+<pre class="prettyprint"><code>&lt;div class="<b>button-container</b>">
     &lt;a href="#" class="button primary">Compose new&lt;/a>
     
     &lt;div class="button-group">
@@ -200,146 +224,17 @@
 
     <div class="section">
         <h2>Buttons with icons</h2>
-        <p>A range of icons can be added (only for links and buttons) by adding a class of <code>icon</code> and any one of the provided icon classes:</p>
+        <p>An icon can be added (only for links and buttons) by adding a class of <code>icon</code> and one defining the icon. The size of the icon must be 12x12px, in an image that is 24px wide (normal icon on the left, hover on the right).</p>
             
         <div class="example">
-            <pre class="prettyprint"><code>&lt;a href="#" class="button icon search">Search&lt;/a></code></pre>
-            <a href="#button" class="button icon search">Search</a>
-        </div>
-        
-        <div class="example">
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Class</th>
-                        <th scope="col">Example</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td scope="row"><code>.arrowup</code></td>
-                    <td><a href="#button" class="button icon arrowup">Move up</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.arrowdown</code></td>
-                    <td><a href="#button" class="button icon arrowdown">Move down</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.arrowleft</code></td>
-                    <td><a href="#button" class="button icon arrowleft">Move left</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.arrowright</code></td>
-                    <td><a href="#button" class="button icon arrowright">Move right</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.approve</code></td>
-                    <td><a href="#button" class="button icon approve">Approve registration</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.add</code></td>
-                    <td><a href="#button" class="button icon add">Add post</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.remove</code></td>
-                    <td><a href="#button" class="button danger icon remove">Remove item</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.log</code></td>
-                    <td><a href="#button" class="button icon log">View log</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.calendar</code></td>
-                    <td><a href="#button" class="button icon calendar">Add to calendar</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.chat</code></td>
-                    <td><a href="#button" class="button icon chat">Start chat</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.clock</code></td>
-                    <td><a href="#button" class="button icon clock">Start timer</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.settings</code></td>
-                    <td><a href="#button" class="button icon settings">Settings</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.comment</code></td>
-                    <td><a href="#button" class="button icon comment">Add comment</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.fork</code></td>
-                    <td><a href="#button" class="button icon fork">Fork</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.like</code></td>
-                    <td><a href="#button" class="button icon like">Like</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.favorite</code></td>
-                    <td><a href="#button" class="button icon favorite">Favorite</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.home</code></td>
-                    <td><a href="#button" class="button icon home">Back to homepage</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.key</code></td>
-                    <td><a href="#button" class="button icon key">Password protect</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.lock</code></td>
-                    <td><a href="#button" class="button icon lock">Lock</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.unlock</code></td>
-                    <td><a href="#button" class="button icon unlock">Unlock</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.loop</code></td>
-                    <td><a href="#button" class="button icon loop">Resend message</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.search</code></td>
-                    <td><a href="#button" class="button icon search">Search</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.mail</code></td>
-                    <td><a href="#button" class="button icon mail">Send email</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.move</code></td>
-                    <td><a href="#button" class="button icon move">Move</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.edit</code></td>
-                    <td><a href="#button" class="button icon edit">Edit post</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.pin</code></td>
-                    <td><a href="#button" class="button icon pin">Pin to Map</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.reload</code></td>
-                    <td><a href="#button" class="button icon reload">Reload page</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.rss</code></td>
-                    <td><a href="#button" class="button icon rss">Subscribe to RSS feed</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.tag</code></td>
-                    <td><a href="#button" class="button icon tag">Add tag</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.trash</code></td>
-                    <td><a href="#button" class="button danger icon trash">Delete post</a></td>
-                </tr>
-                <tr>
-                    <td scope="row"><code>.user</code></td>
-                    <td><a href="#button" class="button icon user">Add new user</a></td>
-                </tr>
-            </table>
+<pre class="prettyprint"><code>&lt;style>
+    .button.favorite.icon:before {
+        background: url("data:image/png;base64,…");
+    }
+&lt;/style>
+
+&lt;a href="#" class="button icon favorite">Add Favorite&lt;/a></code></pre>
+            <a href="#button" class="button icon favorite">Add Favorite</a>
         </div>
     </div>
 
@@ -356,12 +251,8 @@
 
     <div class="section">
         <h2>Acknowledgements</h2>
-        <p>Inspired by <a href="http://michaelhenriksen.dk">Michael Henriksen</a>'s <a href="http://github.com/michenriksen/css3buttons">CSS3 Buttons</a>. Icons from <a href="http://somerandomdude.com/projects/iconic/">Iconic pack</a>.</p>
+        <p>Forked from <a href="https://github.com/necolas/css3-github-buttons">Nicolas Gallagher</a>, who was inspired by <a href="https://michaelhenriksen.dk">Michael Henriksen</a>'s <a href="http://github.com/michenriksen/css3buttons">CSS3 Buttons</a>.</p>
     </div>
-</div>
-
-<div class="footer">
-    <a href="http://github.com/necolas/css3-github-buttons">CSS3 GitHub Buttons</a> by <a href="http://nicolasgallagher.com" title="Website of Nicolas Gallagher">Nicolas Gallagher</a>.
 </div>
 
 </body>
