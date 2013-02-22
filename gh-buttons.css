@@ -30,6 +30,7 @@
     background-image: -ms-linear-gradient(#f4f4f4, #ececec);
     background-image: -o-linear-gradient(#f4f4f4, #ececec);
     background-image: linear-gradient(#f4f4f4, #ececec);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#f4f4f4, endColorstr=#ececec)";
     -moz-background-clip: padding; /* for Firefox 3.6 */
     background-clip: padding-box;
     border-radius: 0.2em;
@@ -46,6 +47,7 @@
     background-image: -moz-linear-gradient(#599bdc, #3072b3);
     background-image: -o-linear-gradient(#599bdc, #3072b3);
     background-image: linear-gradient(#cccccc, #d5d5d5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#cccccc, endColorstr=#d5d5d5)";
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.075) inset;
 }
 
@@ -63,6 +65,7 @@
     background-image: -moz-linear-gradient(#599bdc, #3072b3);
     background-image: -o-linear-gradient(#599bdc, #3072b3);
     background-image: linear-gradient(#599bdc, #3072b3);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#599bdc, endColorstr=#3072b3)";
 }
 
 .button:active {
@@ -74,6 +77,7 @@
     background-image: -ms-linear-gradient(#3072b3, #599bdc);
     background-image: -o-linear-gradient(#3072b3, #599bdc);
     background-image: linear-gradient(#3072b3, #599bdc);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#3072b3, endColorstr=#599bdc)";
 }
 
 /* overrides extra padding on button elements in Firefox */
@@ -141,6 +145,7 @@
     background-image: -ms-linear-gradient(#dc5f59, #b33630);
     background-image: -o-linear-gradient(#dc5f59, #b33630);
     background-image: linear-gradient(#dc5f59, #b33630);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#dc5f59, endColorstr=#b33630)";
 }
 
 .button.danger:active,
@@ -154,6 +159,7 @@
     background-image: -ms-linear-gradient(#b33630, #dc5f59);
     background-image: -o-linear-gradient(#b33630, #dc5f59);
     background-image: linear-gradient(#b33630, #dc5f59);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#b33630, endColorstr=#dc5f59)";
 }
 
 /* Positive button
@@ -176,6 +182,7 @@
     background-image: -ms-linear-gradient(#63b033, #398a00);
     background-image: -o-linear-gradient(#63b033, #398a00);
     background-image: linear-gradient(#63b033, #398a00);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#63b033, endColorstr=#398a00)";
 }
 
 .button.positive:active,
@@ -189,6 +196,7 @@
     background-image: -ms-linear-gradient(#398a00, #63b033);
     background-image: -o-linear-gradient(#398a00, #63b033);
     background-image: linear-gradient(#398a00, #63b033);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#398a00, endColorstr=#63b033)";
 }
 
 /* Pill button
