@@ -142,8 +142,8 @@
 .button.danger.active {
     border-color: #b53f3a;
     border-bottom-color: #a0302a;
-    color: #fff;
-    background-color: #dc5f59;
+    color: #fff !important;
+    background-color: #dc5f59 !important;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630));
     background-image: -moz-linear-gradient(#dc5f59, #b33630);
     background-image: -ms-linear-gradient(#dc5f59, #b33630);
@@ -157,7 +157,7 @@
     text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
     border-color: #a0302a;
     border-bottom-color: #bf4843;
-    background-color: #b33630;
+    background-color: #b33630 !important;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59));
     background-image: -moz-linear-gradient(#b33630, #dc5f59);
     background-image: -ms-linear-gradient(#b33630, #dc5f59);
@@ -179,8 +179,8 @@
 .button.positive.active {
     border-color: #3c9300;
     border-bottom-color: #308100;
-    color: #fff;
-    background-color: #63b033;
+    color: #fff !important;
+    background-color: #63b033 !important;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#63b033), to(#398a00));
     background-image: -moz-linear-gradient(#63b033, #398a00);
     background-image: -ms-linear-gradient(#63b033, #398a00);
@@ -194,7 +194,7 @@
     text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
     border-color: #308100;
     border-bottom-color: #459c12;
-    background-color: #398a00;
+    background-color: #398a00 !important;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#398a00), to(#63b033));
     background-image: -moz-linear-gradient(#398a00, #63b033);
     background-image: -ms-linear-gradient(#398a00, #63b033);
