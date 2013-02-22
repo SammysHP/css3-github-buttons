@@ -107,6 +107,10 @@
     background-position: -12px 0;
 }
 
+.button.icon.icon-only {
+    padding-right: 0px !important;
+}
+
 /* Example:
     .button.iconname.icon:before {
         background: url("data:image/png;base64,…");
