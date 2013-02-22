@@ -20,6 +20,7 @@
     text-align: center;
     text-shadow: 1px 1px 0 #fff;
     font:11px/normal sans-serif;
+    font-weight: bold;
     color: #333;
     white-space: nowrap;
     cursor: pointer;
@@ -252,7 +253,7 @@
    ========================================================================== */
 
 .button.primary {
-    font-weight: bold;
+    font-weight: 900;
 }
 
 /* Danger button
@@ -411,8 +412,13 @@
 .button-group.minor-group .button {
     border: 1px solid #d4d4d4;
     text-shadow: none;
+    font-weight: normal;
     background-image: none;
     background-color: #fff;
+}
+
+.button-group.minor-group .button.primary {
+    font-weight: bold;
 }
 
 .button-group.minor-group .button:hover,
@@ -428,6 +434,7 @@
 .button-group.minor-group .button.icon:before {
     opacity: 0.8;
 }
+
 
 /* =============================================================================
    Button container (mixing buttons and groups, e.g., nav bar)
