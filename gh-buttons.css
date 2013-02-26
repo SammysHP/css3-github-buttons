@@ -111,6 +111,11 @@
     padding-right: 0px !important;
 }
 
+.button.icon.icon-only:after {
+    content: "\00a0";
+    display: block;
+}
+
 /* Example:
     .button.iconname.icon:before {
         background: url("data:image/png;base64,…");
