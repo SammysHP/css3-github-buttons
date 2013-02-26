@@ -319,6 +319,21 @@
     opacity: 0.8;
 }
 
+/* Slim group
+   ========================================================================== */
+
+.button-group.slim-group .button {
+    padding: 0.2em 0.5em;
+}
+
+.button-group.slim-group .button.icon:before {
+    margin: 0 0.5em 0 0;
+}
+
+.button-group.slim-group + .button-group.slim-group {
+    margin-left: 5px;
+}
+
 
 /* =============================================================================
    Button container (mixing buttons and groups, e.g., nav bar)
